@@ -1,0 +1,117 @@
+{
+"docentes": [
+	{
+		"cedula" : "001-0000120-5",
+		"nombres" : "IGNACIA MAYELIN",
+		"apellido1" : "DE LA ROSA",
+		"apellido2" : "DE ROMERO"
+	},
+	{
+		"cedula" : "001-0000328-4",
+		"nombres" : "CARMEN",
+		"apellido1" : "MORETA",
+		"apellido2" : "PEÑA"
+	},
+	{
+		"cedula" : "001-0000350-8",
+		"nombres" : "CLARA ALTAGRACIA",
+		"apellido1" : "ORTIZ",
+		"apellido2" : "DE LA ROSA"
+	},
+	{
+		"cedula" : "001-0000480-3",
+		"nombres" : "JOHANKA",
+		"apellido1" : "SOSA",
+		"apellido2" : "FAÑA"
+	},
+	{
+		"cedula" : "001-0000503-2",
+		"nombres" : "ROSA ALICIA",
+		"apellido1" : "TRONCOSO",
+		"apellido2" : " ABREU"
+	},
+	{
+		"cedula" : "001-0001074-3",
+		"nombres" : "JULIA",
+		"apellido1" : "GONZALEZ",
+		"apellido2" : "MARTINEZ"
+	},
+	{
+		"cedula" : "001-0001462-0",
+		"nombres" : "JULIO CESAR",
+		"apellido1" : "URBAEZ",
+		"apellido2" : "ARIAS"
+	},
+	{
+		"cedula" : "001-0001474-5",
+		"nombres" : "MARIA HERMINIA",
+		"apellido1" : "VASQUEZ",
+		"apellido2" : "TAVAREZ"
+	},
+	{
+		"cedula" : "001-0001475-2",
+		"nombres" : "ARIS DANIA",
+		"apellido1" : "VENTURA",
+		"apellido2" : "ABREU"
+	},
+	{
+		"cedula" : "001-0002237-5",
+		"nombres" : "ROMENA YOLANDA",
+		"apellido1" : "RIJO",
+		"apellido2" : ""
+	},
+	{
+		"cedula" : "001-0002279-7",
+		"nombres" : "JESUS",
+		"apellido1" : "ROSARIO",
+		"apellido2" : "SANTANA"
+	},
+	{
+		"cedula" : "001-0002482-7",
+		"nombres" : "RAQUEL DE LA CARIDAD",
+		"apellido1" : "DOMINGUEZ",
+		"apellido2" : "DE VALENZUELA"
+	},
+	{
+		"cedula" : "001-0002603-8",
+		"nombres" : "ROSA SOLEDAD",
+		"apellido1" : "LEYBA",
+		"apellido2" : "ACOSTA"
+	},
+	{
+		"cedula" : "001-0002808-3",
+		"nombres" : "ANA CIRA",
+		"apellido1" : "SANCHEZ",
+		"apellido2" : ""
+	},
+	{
+		"cedula" : "001-0003209-3",
+		"nombres" : "LOURDES ARACELIS MARIA",
+		"apellido1" : "ROSARIO",
+		"apellido2" : "ROQUE"
+	},
+	{
+		"cedula" : "001-0003799-3",
+		"nombres" : "NATIVIDAD",
+		"apellido1" : "INFANTE",
+		"apellido2" : "VASQUEZ"
+	},
+	{
+		"cedula" : "001-0003811-6",
+		"nombres" : "ELVIRA CRISTINA",
+		"apellido1" : "LIBERATO",
+		"apellido2" : "DE PICHARDO"
+	},
+	{
+		"cedula" : "001-0004295-1",
+		"nombres" : "ELENA CRISTINA A",
+		"apellido1" : "SALDIVAR",
+		"apellido2" : "SANCHEZ"
+	},
+	{
+		"cedula" : "001-0004465-0",
+		"nombres" : "LUCILA",
+		"apellido1" : "CRUZ",
+		"apellido2" : "MARTE"
+	}
+]}
