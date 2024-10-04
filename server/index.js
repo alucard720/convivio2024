@@ -1,51 +1,56 @@
-// const express = require("express");
-// const mssql = require("mssql");
-// const cors = require("cors")
-// const app = express()
+const express = require("express");
+const mysql = require("mysql");
+const cors = require("cors")
+const app = express()
 
-// app.use(cors())
-// app.use(express.json())
+app.use(cors())
+app.use(express.json())
 
-// // const dbConfig = {
-// //     user:'sa',
-// //     password:'Maxelltod360',
-// //     server:'localhost',
-// //     port:1433,
-// //     database:'convivio.test',
-// //     options:{
-// //         trustServerCertificate:true
-// //     }
+const dbConfig = mysql.createConnection({
+    user:'root',
+    password:'maxelltod',
+    server:'localhost',
+    port:3306,
+    database:'db_convivio',
+    options:{
+        trustServerCertificate:true
+    }
 
-// // };
+});
 
-// // app.get('/api/data', async(req,res)=>{
-// //     const {cedula} = req.query;
+dbConfig.connect();
 
-// //     if(!cedula) {
-// //         return res.status(400).send('se requiere cedula');
-// //     }
-// //     try {
-// //         await mssql.connect(dbConfig);
+app.get('/api/padron', async(req,res)=>{
+    const {cedula} = req.query;
 
-// //         const result = await mssql.query `SELECT nombres, apellido1, apellido2 FROm docentes WHERE cedula = ${cedula}`;
+    if(!cedula) {
+        return res.status(400).send('se requiere cedula');
+    }
 
-// //         // res.json(result.recordset);
+    try {
+        const connection = await mysql.createConnection(dbConfig);
 
-// //         if(result.recordset.length > 0){
-// //             res.json(result.recordset[0]);
-// //         }else{
-// //             res.status(400).send('Record no se Encontro')
-// //         }
-// //     } catch (error) {
-// //         console.error('Database Error', error);
-// //         res.status(500).send('Server Error')
+        const [rows] =await connection.execute(
+            'SELECT nombres, apellido1, apellido2 FROM padron WHERE cedula=?',[cedula]
+        );
 
-// //     }
-// // })
+        await connection.end()
 
-// const PORT = process.env.PORT || 3001;
+        if(rows.length > 0){
+            res.json(rows[0])
+        }else{
+            res.status(400).send('Record no se encuentra')
+        }
+    } catch (error) {
+        console.error("Database Error", error)
+        res.status(500).send('Server Error')
+    }
+
+});
+
+const PORT = process.env.PORT || 3001;
 
 
-// app.listen(PORT, () => {
-//   console.log(`Server listening on ${PORT}`);
-// });
+app.listen(PORT, () => {
+  console.log(`Server listening on ${PORT}`);
+});

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { NavLink } from 'react-router-dom'
 
 export default function Component() {
   const [cedula, setCedula] = useState('')
@@ -43,7 +44,37 @@ export default function Component() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-100 to-orange-200 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+
+
+      <div className="flex h-screen bg-gray-100">
+      {/* Sidebar */}
+<div className="w-64 bg-amber-700 text-white">
+        <div className="p-4">
+          <h2 className="text-2xl font-semibold">Menu</h2>
+        </div>
+        <nav className="mt-8">
+          <NavLink to="/search" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-amber-700 hover:text-white">
+            <span className="inline-block mr-2">🏠</span>
+            Inicio
+          </NavLink>
+          <NavLink to="/convivio" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-amber-700 hover:text-white">
+            <span className="inline-block mr-2">👥</span>
+            Registro Convivio
+          </NavLink>
+          <NavLink to="/register" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-amber-700 hover:text-white">
+            <span className="inline-block mr-2">📅</span>
+            Reportes
+          </NavLink>
+          {/* <NavLink href="#" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-amber-700 hover:text-white">
+            <span className="inline-block mr-2">⚙️</span>
+            Configuración
+          </NavLink> */}
+        </nav>
+      </div>
+
+      {/*Main*/}
+              <div className="flex-1 overflow-auto">
+    <div className="min-h-screen bg-gradient-to-br from-amber-600 to-orange-200 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-md bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="relative h-40 sm:h-48">
           <img
@@ -115,5 +146,8 @@ export default function Component() {
         </div>
       </div>
     </div>
+    </div>
+    </div>
+
   )
 }
