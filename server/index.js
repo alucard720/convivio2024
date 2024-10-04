@@ -30,7 +30,7 @@ app.get('/api/padron', async(req,res)=>{
     try {
         const connection = await mysql.createConnection(dbConfig);
 
-        const [rows] =await connection.execute(
+        const [rows] = await connection.execute(
             'SELECT nombres, apellido1, apellido2 FROM padron WHERE cedula=?',[cedula]
         );
 

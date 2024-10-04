@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Eye, EyeOff, UserCircle2 } from 'lucide-react'
+import { NavLink } from 'react-router-dom'
 
 export default function Component() {
   const [showPassword, setShowPassword] = useState(false)
@@ -31,6 +32,34 @@ export default function Component() {
   }
 
   return (
+    <div className="flex h-screen bg-gray-100">
+    {/* Sidebar */}
+<div className="w-64 bg-amber-700 text-white">
+        <div className="p-4">
+          <h2 className="text-2xl font-semibold">Menu</h2>
+        </div>
+        <nav className="mt-8">
+          <NavLink to="/search" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-amber-700 hover:text-white">
+            <span className="inline-block mr-2">🏠</span>
+            Inicio
+          </NavLink>
+          <NavLink to="/convivio" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-amber-700 hover:text-white">
+            <span className="inline-block mr-2">👥</span>
+            Registro Convivio
+          </NavLink>
+          <NavLink to="/register" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-amber-700 hover:text-white">
+            <span className="inline-block mr-2">📅</span>
+            Reportes
+          </NavLink>
+          {/* <NavLink href="#" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-amber-700 hover:text-white">
+            <span className="inline-block mr-2">⚙️</span>
+            Configuración
+          </NavLink> */}
+        </nav>
+      </div>
+
+       {/*Main*/}
+       <div className="flex-1 overflow-auto">
     <div className="min-h-screen flex flex-col items-center justify-center py-6 px-4 bg-gradient-to-br from-orange-100 to-brown-100">
       <div className="max-w-md w-full">
         <img
@@ -127,6 +156,8 @@ export default function Component() {
           </form>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   )
 }

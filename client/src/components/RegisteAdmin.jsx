@@ -56,14 +56,14 @@ export default function RegisterForm() {
             <span className="inline-block mr-2">👥</span>
             Registro Convivio
           </NavLink>
-          <NavLink to="/register" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-amber-700 hover:text-white">
+          <NavLink to="/reportes" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-amber-700 hover:text-white">
             <span className="inline-block mr-2">📅</span>
             Reportes
           </NavLink>
-          {/* <NavLink href="#" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-amber-700 hover:text-white">
+           <NavLink to="/register" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-amber-700 hover:text-white">
             <span className="inline-block mr-2">⚙️</span>
-            Configuración
-          </NavLink> */}
+            Registro Adminitrativo
+          </NavLink> 
         </nav>
       </div>
 
