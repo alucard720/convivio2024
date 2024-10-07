@@ -44,7 +44,7 @@ export default function RegisterForm() {
       <div className="flex h-screen bg-gray-100">
 {/* Sidebar */}
 <div className="w-64 bg-amber-700 text-white">
-        <div className="p-4">
+        <div className="p-5">
           <h2 className="text-2xl font-semibold">Menu</h2>
         </div>
         <nav className="mt-8">
